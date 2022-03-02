@@ -10,7 +10,7 @@ export const NotFound = () => {
 				<div className="mt-3">
 					<h2 className="fs-1 ">Oops! Page not found...</h2>
 					<Link
-						to="/"
+						to="/mern_videos/"
 						className="mt-4 btn btn-primary d-flex align-items-center justify-content-center gap-2"
 					>
 						<i className="fa-solid fa-home"></i>

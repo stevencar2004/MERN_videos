@@ -2,7 +2,7 @@ import axios from "axios";
 import { INewVideo } from "../../Video/Domain/INewVideo";
 import { IVideos } from "../../Video/Domain/IVideo";
 
-const URL_API: string = "http://localhost:3001";
+const URL_API: string = "https://api-mern-videos.herokuapp.com/";
 
 // GET LIST VIDEOS
 export const getVideos = async () => {

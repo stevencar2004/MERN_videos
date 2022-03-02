@@ -5,7 +5,7 @@ const index = () => {
 		<>
 			<nav className="navbar navbar-expand-md navbar-light">
 				<div className="container-md d-flex  justify-content-md-around  justify-content-sm-between">
-					<NavLink className="navbar-brand d-flex gap-2" to="/">
+					<NavLink className="navbar-brand d-flex gap-2" to="/mern_videos/">
 						<img src="./img/play-solid.svg" alt="" style={{ width: 18 }} />
 						<span>MERN Videos</span>
 					</NavLink>
@@ -28,19 +28,19 @@ const index = () => {
 					>
 						<ul className="navbar-nav mb-2 mb-md-0">
 							<li className="nav-item">
-								<NavLink className="nav-link" to="/">
+								<NavLink className="nav-link" to="/mern_videos/">
 									Home
 								</NavLink>
 							</li>
 
 							<li className="nav-item">
-								<NavLink className="nav-link " to="/new-video">
+								<NavLink className="nav-link " to="/mern_videos/new-video">
 									Create Video
 								</NavLink>
 							</li>
 
 							<li className="nav-item">
-								<NavLink className="nav-link " to="/dashboard">
+								<NavLink className="nav-link " to="/mern_videos/dashboard">
 									Dashboard
 								</NavLink>
 							</li>

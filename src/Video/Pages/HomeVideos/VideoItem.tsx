@@ -53,7 +53,7 @@ export const VideoItem = ({ video }: IpropsVideoItem) => {
 						</button>
 
 						<Link
-							to={`/update/${video._id}`}
+							to={`/mern_videos/update/${video._id}`}
 							className="btn btn-warning d-flex align-items-center gap-2"
 						>
 							<i className="fa-solid fa-pen"></i>

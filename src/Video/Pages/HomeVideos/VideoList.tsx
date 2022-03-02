@@ -30,7 +30,7 @@ export const VideoList = () => {
 							<div className="col-12 col-md-6">
 								<h2 className="text-muted">There are currently no videos...</h2>
 								<Link
-									to="/new-video"
+									to="/mern_videos/new-video"
 									className="mt-4 btn btn-success d-flex align-items-center gap-2"
 								>
 									<i className="fa-solid fa-plus"></i>

@@ -119,7 +119,7 @@ const Index = () => {
 							<span>Create Video</span>
 						</button>
 					)}
-					<Link to="/">Go to Back</Link>
+					<Link to="/mern_videos/">Go to Back</Link>
 				</div>
 			</form>
 		</section>

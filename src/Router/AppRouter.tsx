@@ -15,12 +15,12 @@ export const AppRouter = () => {
 			<NavBar />
 
 			<Routes>
-				<Route path="/" element={<VideoList />} />
-				<Route path="/new-video" element={<NewVideoForm />} />
-				<Route path="/update/:id" element={<NewVideoForm />} />
-				<Route path="/dashboard" element={<Dashboard />} />
-				<Route path="/404" element={<NotFound />} />
-				<Route path="/*" element={<Redirect route="404" />} />
+				<Route path="/mern_videos/" element={<VideoList />} />
+				<Route path="/mern_videos/new-video" element={<NewVideoForm />} />
+				<Route path="/mern_videos/update/:id" element={<NewVideoForm />} />
+				<Route path="/mern_videos/dashboard" element={<Dashboard />} />
+				<Route path="/mern_videos/404" element={<NotFound />} />
+				<Route path="/mern_videos/*" element={<Redirect route="/mern_videos/404" />} />
 			</Routes>
 
 			<ToastContainer />
