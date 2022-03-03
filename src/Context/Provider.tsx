@@ -15,6 +15,8 @@ import { TProviderProps } from "./Domain/TProviderProps";
 
 // Components
 import { toast } from "react-toastify";
+import { Redirect } from "../Components/Redirect";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const INITIAL_STATE: INewVideo = {
 	title: "",
@@ -70,6 +72,7 @@ export const Provider = ({ children }: TProviderProps) => {
 	const handleDeleteVideo = async (id: string) => {
 		videoServices.deleteVideo(id);
 		loadVideos();
+		toast.success("Deleted Video");
 	};
 	const handleCreatedORUpdated = async (
 		id: string | undefined,

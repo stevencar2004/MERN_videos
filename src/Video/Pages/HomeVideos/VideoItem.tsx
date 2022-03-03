@@ -13,6 +13,10 @@ import ReactPlayer from "react-player";
 export const VideoItem = ({ video }: IpropsVideoItem) => {
 	const { handleDeleteVideo } = useContext(MernContext);
 
+	const deleteVideo = () => {
+		handleDeleteVideo(video._id);
+	};
+
 	return (
 		<div className="col-md-6 col-xl-4">
 			<div className="card" style={{ height: "600px" }}>
@@ -26,7 +30,9 @@ export const VideoItem = ({ video }: IpropsVideoItem) => {
 				<div className="card-body mt-4">
 					<h5 className="card-title ">{video.title}</h5>
 					<p className="card-text">
-						{video.description.length > 30 && video.description.slice(0, 77) + "..."}
+						{video.description.length > 30
+							? video.description.slice(0, 77) + "..."
+							: video.description}
 					</p>
 					<h6 className="text-muted">Gender: {video.gender}</h6>
 				</div>
@@ -43,10 +49,7 @@ export const VideoItem = ({ video }: IpropsVideoItem) => {
 					<div className="d-flex gap-2">
 						<button
 							className="btn btn-danger d-flex align-items-center gap-2"
-							onClick={() => {
-								const id = video._id;
-								handleDeleteVideo(id);
-							}}
+							onClick={deleteVideo}
 						>
 							<i className="fa-solid fa-trash"></i>
 							<span>Delete</span>

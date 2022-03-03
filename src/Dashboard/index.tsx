@@ -9,7 +9,7 @@ export const Dashboard = () => {
 
 	useEffect(() => {
 		loadVideos();
-	}, []);
+	}, [videos]);
 
 	return (
 		<section className="container-md mt-5">
@@ -17,7 +17,7 @@ export const Dashboard = () => {
 				<h3>Genders:</h3>
 				{listGenders ? (
 					listGenders.map((gender) => (
-						<div className="col">
+						<div className="col" key={gender}>
 							<div
 								className={`card p-3 ${
 									listGenders.indexOf(gender) % 2 == 0 ? "bg-success" : "bg-primary"
@@ -47,7 +47,7 @@ export const Dashboard = () => {
 							<div className="videoList row gy-4">
 								{videos.length > 0 &&
 									videos.slice(0, 3).map((video) => (
-										<div className="col-12 col-md-6 col-xxl-4">
+										<div className="col-12 col-md-6 col-xxl-4" key={video._id}>
 											<h5 className="text-muted" style={{ height: 50 }}>
 												{video.title}
 											</h5>
@@ -82,7 +82,10 @@ export const Dashboard = () => {
 						<ul className="list-group ">
 							{videos.length > 0 &&
 								videos.map((video) => (
-									<li className="list-group-item d-flex justify-content-between gap-2">
+									<li
+										className="list-group-item d-flex justify-content-between gap-2"
+										key={video._id}
+									>
 										<p>{video.title}</p>
 										<div className="d-flex gap-1">
 											<button
@@ -96,7 +99,7 @@ export const Dashboard = () => {
 											</button>
 
 											<Link
-												to={`/update/${video._id}`}
+												to={`/mern_videos/update/${video._id}`}
 												className="btn btn-warning d-flex align-items-center gap-2"
 											>
 												<i className="fa-solid fa-pen"></i>

@@ -9,13 +9,12 @@ import { Filtrado } from "../../Components/Filtrado";
 import { VideoItem } from "./VideoItem";
 
 export const VideoList = () => {
-	const { fieldSearch, genderFilter, videos, loadVideos, isLoadingVideos, filterVideos } =
-		useContext(MernContext);
+	const { videos, loadVideos, isLoadingVideos, filterVideos } = useContext(MernContext);
 
 	useEffect(() => {
 		loadVideos();
 		filterVideos();
-	}, [genderFilter, fieldSearch]);
+	}, [videos]);
 
 	return (
 		<section className="container-md mt-4">
